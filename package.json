@@ -1,0 +1,9 @@
+{
+  "name": "mast-magan-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium multi-page restaurant website for Mast Magan Restaurant.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

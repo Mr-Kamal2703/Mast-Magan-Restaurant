@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserve a table at Mast Magan Restaurant with a premium booking form.">
+  <title>Booking | Mast Magan Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="top">
+  <div class="page-sheen"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="index.html"><span class="brand-mark__sigil">MM</span><span><span class="d-block brand-mark__title">Mast Magan</span><small class="brand-mark__sub">Restaurant & Bar</small></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto me-lg-3 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions d-flex align-items-center gap-2">
+          <button class="btn btn-ghost btn-icon" id="themeToggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+          <a class="btn btn-premium" href="contact.html">Plan with us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-offset">
+    <section class="page-hero section-padding pb-4">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow">Reservation</span>
+            <h1 class="display-2 hero-title">Book a table with ease.</h1>
+            <p class="hero-text">Choose your date, time, and party size. This booking form includes validation, polished feedback, and an online-ordering style add-on panel.</p>
+            <div class="hero-pills contact-pills">
+              <span class="hero-pill">Quick booking</span>
+              <span class="hero-pill">Private dining</span>
+              <span class="hero-pill">Celebrations</span>
+            </div>
+            <p class="hero-note mt-3">Thoughtful reservations for intimate dinners, large parties, and special occasions.</p>
+          </div>
+          <div class="col-lg-7 reveal reveal-delay-1">
+            <div class="booking-panel booking-panel--form">
+              <div class="booking-panel__header">
+                <span class="card-kicker">Reservation details</span>
+                <h2 class="booking-panel__title">Secure your preferred table.</h2>
+                <p class="booking-panel__text">Share a few details and we'll keep the rest polished, personal, and quick.</p>
+              </div>
+              <form id="bookingForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="name">Full name</label>
+                    <input class="form-control premium-control" id="name" name="name" type="text" placeholder="Your name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">Phone number</label>
+                    <input class="form-control premium-control" id="phone" name="phone" type="tel" placeholder="+91..." required>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="date">Date</label>
+                    <input class="form-control premium-control" id="date" name="date" type="date" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="time">Time</label>
+                    <input class="form-control premium-control" id="time" name="time" type="time" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="guests">Guests</label>
+                    <select class="form-select premium-control" id="guests" name="guests" required>
+                      <option value="">Select</option>
+                      <option>2</option>
+                      <option>4</option>
+                      <option>6</option>
+                      <option>8+</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="requests">Special requests</label>
+                    <textarea class="form-control premium-control" id="requests" name="requests" rows="4" placeholder="Anniversary setup, dietary notes, and more..."></textarea>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
+                    <button class="btn btn-premium btn-lg" type="submit">Confirm reservation</button>
+                    <div class="inline-note"><i class="fa-solid fa-circle-info"></i> Instant confirmation popup included</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding section-surface">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 reveal">
+            <div class="info-card premium-highlight-card">
+              <span class="card-kicker">Hours</span>
+              <i class="fa-solid fa-clock info-card__icon"></i>
+              <h3>Opening hours</h3>
+              <p>Mon-Sun, 12:00 PM - 11:30 PM</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-1">
+            <div class="info-card premium-highlight-card">
+              <span class="card-kicker">Service</span>
+              <i class="fa-solid fa-truck-fast info-card__icon"></i>
+              <h3>Online ordering</h3>
+              <p>Pickup and delivery-friendly ordering UI available on request.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-2">
+            <div class="info-card premium-highlight-card">
+              <span class="card-kicker">Support</span>
+              <i class="fa-solid fa-whatsapp info-card__icon"></i>
+              <h3>WhatsApp support</h3>
+              <p>Quick booking changes and event planning via direct message.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-premium section-surface">
+    <div class="container py-5">
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-lg-5">
+          <a class="brand-mark brand-mark--footer" href="index.html">
+            <span class="brand-mark__sigil">MM</span>
+            <span>
+              <span class="d-block brand-mark__title">Mast Magan</span>
+              <small class="brand-mark__sub">Restaurant & Bar</small>
+            </span>
+          </a>
+          <p class="text-muted-soft mt-3">Reserve with confidence and arrive to a polished, welcoming table.</p>
+          <p class="footer-note">For quick help, private dining, and special requests, our team is ready.</p>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-links">
+            <li>+91 98765 43210</li>
+            <li>reservations@mastmagan.com</li>
+            <li>12 Heritage Lane, Mumbai</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <h3 class="footer-title">Follow</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Mast Magan Restaurant</span>
+        <a href="#top" class="back-to-top-link">Back to top</a>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-shell" id="toastShell" aria-live="polite" aria-atomic="true"></div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

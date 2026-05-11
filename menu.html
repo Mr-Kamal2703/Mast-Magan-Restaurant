@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the Mast Magan Restaurant menu and filter by course.">
+  <title>Menu | Mast Magan Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="top">
+  <div class="page-sheen"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="index.html"><span class="brand-mark__sigil">MM</span><span><span class="d-block brand-mark__title">Mast Magan</span><small class="brand-mark__sub">Restaurant & Bar</small></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto me-lg-3 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions d-flex align-items-center gap-2">
+          <button class="btn btn-ghost btn-icon" id="themeToggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+          <a class="btn btn-premium" href="booking.html">Reserve your table</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-offset">
+    <section class="page-hero section-padding pb-3">
+      <div class="container">
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">Menu</span>
+            <h1 class="display-2 hero-title">Curated plates, crafted to feel timeless.</h1>
+            <p class="hero-text">Filter the menu below to explore starters, mains, desserts, and cocktails. The UI is intentionally tactile, mobile-friendly, and fast.</p>
+            <div class="hero-pills contact-pills">
+              <span class="hero-pill">Seasonal edit</span>
+              <span class="hero-pill">Chef's tasting</span>
+              <span class="hero-pill">Elegant pairings</span>
+            </div>
+            <p class="hero-note mt-3">A refined selection designed for long dinners, celebratory tables, and thoughtful pairings.</p>
+          </div>
+          <div class="col-lg-5 reveal reveal-delay-1">
+            <div class="menu-feature premium-menu-card">
+              <span class="card-kicker">Chef's note</span>
+              <div>
+                <h2>Seasonal tasting available nightly</h2>
+                <p class="text-muted-soft mb-0">A guided tasting built for guests who want the kitchen's most expressive plates.</p>
+              </div>
+              <a class="btn btn-premium" href="booking.html">Book the tasting</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4 reveal">
+            <div class="tasting-panel">
+              <span class="eyebrow">Signature tasting</span>
+              <h2>Four courses. One elegant arc.</h2>
+              <p>Begin with bright starters, move into charcoal and spice, and finish with a restrained dessert course.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-1">
+            <div class="tasting-panel tasting-panel--center">
+              <span class="eyebrow">Pairings</span>
+              <h2>Designed for balance.</h2>
+              <p>Our wine and mocktail pairings are tuned to keep the meal moving with depth, lift, and contrast.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-2">
+            <div class="tasting-panel">
+              <span class="eyebrow">Special offer</span>
+              <h2 class="text-accent-red">Private dining for 6+ guests.</h2>
+              <p>Ask about our celebration menus and curated table styling when you book.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding pt-4">
+      <div class="container">
+        <div class="menu-section-divider reveal">
+          <span>Kitchen Edit</span>
+          <div></div>
+          <span>Filtered selections</span>
+        </div>
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="starters">Starters</button>
+          <button class="filter-btn" data-filter="mains">Mains</button>
+          <button class="filter-btn" data-filter="desserts">Desserts</button>
+          <button class="filter-btn" data-filter="drinks">Drinks</button>
+        </div>
+        <div class="row g-4 mt-2" id="menuGrid">
+          <div class="col-md-6 col-lg-4 menu-item reveal" data-category="starters">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Starter</span>
+              <div class="menu-card__image menu-card__image--1"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Truffle Paneer Tikka</h3><span>$18</span></div>
+                <p>Clay oven paneer with truffle glaze and herb oil.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 menu-item reveal reveal-delay-1" data-category="starters">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Starter</span>
+              <div class="menu-card__image menu-card__image--2"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Charred Corn Chaat</h3><span>$14</span></div>
+                <p>Crisp, bright, and finished with lime yogurt.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 menu-item reveal reveal-delay-2" data-category="mains">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Main</span>
+              <div class="menu-card__image menu-card__image--3"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Royal Lamb Shank</h3><span>$28</span></div>
+                <p>Slow-braised lamb in saffron demi-glace.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 menu-item reveal" data-category="mains">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Main</span>
+              <div class="menu-card__image menu-card__image--4"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Smoked Butter Chicken</h3><span>$24</span></div>
+                <p>Silky, smoky, and balanced with fresh fenugreek.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 menu-item reveal reveal-delay-1" data-category="desserts">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Dessert</span>
+              <div class="menu-card__image menu-card__image--5"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Saffron Creme Brulee</h3><span>$12</span></div>
+                <p>Torched sugar, cardamom citrus, and creamy finish.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 menu-item reveal reveal-delay-2" data-category="drinks">
+            <article class="menu-card premium-menu-card">
+              <span class="menu-preview__tag">Drink</span>
+              <div class="menu-card__image menu-card__image--6"></div>
+              <div class="menu-card__body">
+                <div class="d-flex justify-content-between gap-3"><h3>Rose Gold Spritz</h3><span>$16</span></div>
+                <p>Botanical, sparkling, and elegantly floral.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-premium section-surface">
+    <div class="container py-5">
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-lg-5">
+          <a class="brand-mark brand-mark--footer" href="index.html">
+            <span class="brand-mark__sigil">MM</span>
+            <span>
+              <span class="d-block brand-mark__title">Mast Magan</span>
+              <small class="brand-mark__sub">Restaurant & Bar</small>
+            </span>
+          </a>
+          <p class="text-muted-soft mt-3">A curated kitchen edit for every mood, course, and occasion.</p>
+          <p class="footer-note">Book the tasting, build a table of favorites, and stay for dessert.</p>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-links">
+            <li>+91 98765 43210</li>
+            <li>reservations@mastmagan.com</li>
+            <li>12 Heritage Lane, Mumbai</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <h3 class="footer-title">Follow</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Mast Magan Restaurant</span>
+        <a href="#top" class="back-to-top-link">Back to top</a>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
